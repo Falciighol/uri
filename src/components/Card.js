@@ -12,6 +12,7 @@ const Card = () => {
 const CardContent = styled.div`
     width: 18rem;
     height: 6rem;
+    display: flex;
     flex-direction: row;
     background-color: #FFFFFF;
     border: 1px solid #e8e8e8;

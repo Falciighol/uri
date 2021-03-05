@@ -89,7 +89,9 @@ const Landing = () => {
                     />
                 </motion.div>
                 <CardsContainer>
-                    <Cards />
+                    <div>
+                        <Cards />
+                    </div>
                 </CardsContainer>
             </Container>
         </Layout>
@@ -169,7 +171,7 @@ const CardsContainer = styled.div`
     overflow: auto;
     max-height: 25rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
     /* border: 1px solid #e8e8e8; */
@@ -178,6 +180,17 @@ const CardsContainer = styled.div`
     height: 500px;
     margin: 2rem 0;
     padding: .5rem;
+
+    &>div {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        @media screen
+            and (max-width: 703px) {
+            justify-content: center;
+        }
+    }
 
     @media screen
         and (max-width: 703px) {
