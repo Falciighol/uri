@@ -13,7 +13,8 @@ const CardContent = styled.div`
     width: 18rem;
     height: 6rem;
     flex-direction: row;
-    border: 1px solid #d9d9d9;
+    background-color: #FFFFFF;
+    border: 1px solid #e8e8e8;
     border-radius: 15px;
     margin: .5rem;
 

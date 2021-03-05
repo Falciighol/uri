@@ -165,6 +165,7 @@ const Container = styled(motion.div)`
 
 const CardsContainer = styled.div`
     position: relative;
+    background-color: #fafafa;
     overflow: auto;
     max-height: 25rem;
     display: flex;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Input as AntdInput, Button } from 'antd';
 import styled from 'styled-components';
-import { FaPlay } from "react-icons/fa";
+import { FaCut as FaCut } from "react-icons/fa";
 
 const InputWithButton = ({
     placeholder, 
@@ -16,10 +16,10 @@ const InputWithButton = ({
                 className="button"
                 type="primary"
                 loading={loading}
-                icon={<FaPlay />}
+                icon={<FaCut />}
                 onClick={() => setLoading(false)}
             >
-                &nbsp;Go
+                &nbsp; Shorten
             </Button>
         </Container>
     )
@@ -62,6 +62,7 @@ const Container = styled.div`
     .ant-input {
         width: 25rem;
         border-radius: 5px;
+        border-color: #e8e8e8;
         height: 2.5rem;
         align-items: center;
         font-size: medium;
