@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { Input as AntdInput, Button } from 'antd';
-import { PlayCircleFilled } from '@ant-design/icons';
 import styled from 'styled-components';
+import { FaPlay } from "react-icons/fa";
 
 const InputWithButton = ({
     placeholder, 
@@ -16,10 +16,10 @@ const InputWithButton = ({
                 className="button"
                 type="primary"
                 loading={loading}
-                icon={<PlayCircleFilled />}
+                icon={<FaPlay />}
                 onClick={() => setLoading(false)}
             >
-                Go
+                &nbsp;Go
             </Button>
         </Container>
     )
@@ -65,6 +65,7 @@ const Container = styled.div`
         height: 2.5rem;
         align-items: center;
         font-size: medium;
+        font-family: Rubik;
         margin-right: 1rem;
         color: #555;
 
@@ -80,6 +81,9 @@ const Container = styled.div`
 
     .button {
         width: auto;
+        display: flex;
+        align-items: center;
+        font-family: Rubik;
         background-color: #8A0CFF;
         border-color: #d3a3ff00;
         border-radius: 25px;
