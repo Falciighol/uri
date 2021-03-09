@@ -74,7 +74,7 @@ const Navbar = styled.header`
 	height: 60px;
 	padding: 0 10rem;
 	display: flex;
-	background-color: #fafafa;
+	background-color: var(--header-bg);
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
@@ -121,6 +121,7 @@ const Main = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--text);
 
     transition: padding 1s ease;
 
@@ -151,13 +152,13 @@ const Main = styled.main`
 const Footer = styled.footer`
     width: 100%;
 	height: 75px;
-	border-top: 1px solid #f8f8f8;
-	color: rgb(172, 172, 172);
+	border-top: 1px solid var(--divider);
+	color: var(--disabled-text);
 	font-size: small;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    font-family: Nunito;
+    font-family: Rubik;
 `;
 
 export default Layout;

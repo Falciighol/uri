@@ -100,25 +100,24 @@ const Landing = () => {
 
 const Container = styled(motion.div)`
     width: 100%;
-	background-color: rgb(255, 255, 255);
+	background-color: var(--bg);
 	padding: 5rem 0;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+    color: var(--text);
 
 	transition: padding 1s ease;
 
     .title {
         margin: 0;
-        text-align: left;
         line-height: 1.15;
         font-size: 4rem;
         font-weight: bold;
-        font-family: Nunito;
     }
 
     .title text { 
-        color: #8A0CFF;
+        color: var(--primary);
         font-weight: bolder;
         text-decoration: none;
     }
@@ -132,13 +131,14 @@ const Container = styled(motion.div)`
     .title,
     .description {
         text-align: left;
+        font-family: Nunito;
     }
 
     .description {
         margin: 0 0 2rem;
         line-height: 1.5;
         font-size: 1.5rem;
-        font-family: Nunito;
+        color: var(--text);
     }
 
     @media screen
@@ -167,16 +167,13 @@ const Container = styled(motion.div)`
 
 const CardsContainer = styled.div`
     position: relative;
-    background-color: #fafafa;
+    background-color: var(--container-bg);
     overflow: auto;
     max-height: 25rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    /* border: 1px solid #e8e8e8; */
+    /* border: 1px solid var(--border); */
     border-radius: 15px;
-    width: 100%;
     height: 500px;
     margin: 2rem 0;
     padding: .5rem;
@@ -184,11 +181,28 @@ const CardsContainer = styled.div`
     &>div {
         display: flex;
         justify-content: flex-start;
-        flex-wrap: wrap;
         align-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 1220px;
+
+        transition: width 1s ease;
+
         @media screen
             and (max-width: 703px) {
+            width: 100%;
             justify-content: center;
+        }
+
+        @media screen
+            and (min-width: 704px)
+            and (max-width: 1180px) {
+            width: 620px;
+        }
+
+        @media screen
+            and (min-width: 1181px)
+            and (max-width: 1575px) {
+            width: 920px;
         }
     }
 
